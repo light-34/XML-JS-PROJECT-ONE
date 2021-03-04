@@ -26,7 +26,8 @@
                             <td>
                                 <xsl:value-of select="status" />
                             </td>
-                            <xsl:if test="//item[@instock='N']">
+                            <xsl:choose>
+                            <xsl:when test="item[@instock='N']">
                             <td>
                                 <table border='1'>
                                     <tr>
@@ -36,21 +37,21 @@
                                     </tr>
                                     <xsl:for-each select="item">
                                         <tr>
-                                            <td bgColor="red">
+                                            <td style='background-color: red'>
                                                 <xsl:value-of select="name" />
                                             </td>
-                                            <td bgColor="red">
+                                            <td style='background-color: red'>
                                                 <xsl:value-of select="price" />
                                             </td>
-                                            <td bgColor="red">
+                                            <td style='background-color: red'>
                                                 <xsl:value-of select="qty" />
                                             </td>
                                         </tr>
                                     </xsl:for-each>
                                 </table>
                             </td>
-                            </xsl:if>
-                            <xsl:else>
+                            </xsl:when>
+                            <xsl:otherwise>
                                 <td>
                                 <table border='1'>
                                     <tr>
@@ -60,20 +61,21 @@
                                     </tr>
                                     <xsl:for-each select="item">
                                         <tr>
-                                            <td bgColor="white">
+                                            <td style='background-color: white'>
                                                 <xsl:value-of select="name" />
                                             </td>
-                                            <td bgColor="white">
+                                            <td>
                                                 <xsl:value-of select="price" />
                                             </td>
-                                            <td bgColor="white">
+                                            <td>
                                                 <xsl:value-of select="qty" />
                                             </td>
                                         </tr>
                                     </xsl:for-each>
                                 </table>
                                 </td>
-                            </xsl:else>
+                            </xsl:otherwise>
+                            </xsl:choose>
                         </tr>
                     </xsl:for-each>
                 </table>
