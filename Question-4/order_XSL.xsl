@@ -5,30 +5,19 @@
         <html>
             <body>
                 <table border='1'>
-                    <tr>
-                        <td>
-                            <h4>Customer ID</h4>
-                        </td>
-                        <td>
-                            <h4>Status</h4>
-                        </td>
-                        <td>
-                            <h4>Item</h4>
-                        </td>
-                    </tr>
                     <xsl:for-each select="//order">
                         <tr>
-                            <td>
-                                <xsl:value-of select="customerid" />
-                            </td>
-                            <td>
-                                <xsl:value-of select="status" />
-                            </td>
-
-                            <td>
+                        <td> Order Id : <xsl:value-of select="@ordId" /></td>
+                        </tr>
+                        <tr>
+                        <td>
                                 <table border='1'>
                                     <tr>
                                         <td> Name </td>
+                                        <td> Customer Id </td>
+                                        <td> Status  </td>
+                                        <td> Item Id </td>
+                                        <td> Instock </td>
                                         <td> Price </td>
                                         <td> Quantity </td>
                                     </tr>
@@ -37,6 +26,10 @@
                                             <td>
                                                 <xsl:value-of select="name" />
                                             </td>
+                                            <td> <xsl:value-of select="../customerid" /></td>
+                                            <td> <xsl:value-of select="../status" /> </td>
+                                            <td> <xsl:value-of select="@itemid" /> </td>
+                                            <td> <xsl:value-of select="@instock" /> </td>
                                             <td>
                                                 <xsl:value-of select="price" />
                                             </td>
@@ -46,7 +39,7 @@
                                         </tr>
                                     </xsl:for-each>
                                 </table>
-                            </td>
+                           </td>
 
                         </tr>
                     </xsl:for-each>

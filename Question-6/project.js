@@ -29,13 +29,13 @@ function tableView() {
             txtInTab += "<tr>";
             txtInTab += "<td>" + customerId[index].innerHTML + "</td>";
             txtInTab += "<td>" + order[index].getAttribute('ordId') + "</td>";
-            
+
             var nodeElem = order[index];
             var first = nodeElem.firstChild;
             var valItem = "";
             for (let i = 0; i < nodeElem.childNodes.length; i++) {
                 if (first.nodeName == 'item') {
-                    valItem += first.getAttribute('itemid') + "    ";
+                    valItem += first.getAttribute('itemid') + "  ";
                 }
 
                 first = first.nextSibling;
