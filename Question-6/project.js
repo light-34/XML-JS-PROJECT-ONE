@@ -29,7 +29,7 @@ function tableView() {
             txtInTab += "<tr>";
             txtInTab += "<td>" + customerId[index].innerHTML + "</td>";
             txtInTab += "<td>" + order[index].getAttribute('ordId') + "</td>";
-            
+
             var nodeElem = order[index];
             var first = nodeElem.firstChild;
             var valItem = "";
