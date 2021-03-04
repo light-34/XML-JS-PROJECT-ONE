@@ -23,7 +23,7 @@ var itemName = $('name');
 var price = $('price');
 var qty = $('qty');
 
-var txtF = document.getElementById('textfield').value;
+
 
 function tableView() {
     var txtInTab = "<table border='1'>";
@@ -31,8 +31,10 @@ function tableView() {
     txtInTab += "<td>INSTOCK</td> <td>ITEM ID</td> <td>PRICE</td> <td>QUANTITY</td></tr>";
 
     for (let index = 0; index < order.length; index++) {
+        var txtF = document.getElementById('textfield').value;
+        var nameVal = itemName[index].innerHTML;
 
-        if (txtF == itemName[index].innerHTML) {
+        if ( txtF == nameVal) {
             txtInTab += "<tr>";
             txtInTab += "<td>" + customerId[index].innerHTML + "</td>";
             txtInTab += "<td>" + order[index].getAttribute('ordId') + "</td>";
