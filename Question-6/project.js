@@ -35,7 +35,7 @@ function tableView() {
             var valItem = "";
             for (let i = 0; i < nodeElem.childNodes.length; i++) {
                 if (first.nodeName == 'item') {
-                    valItem += first.getAttribute('itemid') + "    ";
+                    valItem += first.getAttribute('itemid') + "  ";
                 }
 
                 first = first.nextSibling;
