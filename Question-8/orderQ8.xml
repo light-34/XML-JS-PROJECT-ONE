@@ -6,7 +6,8 @@
         <item instock="Y" itemid="SD93"> 
             <name>Flying By Roller Skates</name> 
             <price>25.00</price> 
-            <qty>25</qty> 
+            <qty>25</qty>
+            <supplier> </supplier> 
         </item> 
         <item instock="N" itemid="B12"> 
             <name>Bounce-o Ball</name> 
@@ -59,6 +60,52 @@
             <name>Bounce-x Ball</name> 
             <price>3.35</price> 
             <qty>100</qty> 
+        </item>  
+    </order> 
+    
+
+
+
+    <order ordId = "abc123"> 
+        <customerid>1337</customerid> 
+        <status>pending</status> 
+        <item instock="N" itemid="F13"> 
+            <name>RTX 3080</name> 
+            <price>2000</price> 
+            <qty>1</qty> 
+        </item>
+	<item instock="Y" itemid="S10"> 
+            <name>1tb SSD</name> 
+            <price>250</price> 
+            <qty>2</qty> 
+        </item>  
+    </order>
+    <order ordId = "ab101"> 
+        <customerid>1995</customerid> 
+        <status>pending</status> 
+        <item instock="N" itemid="F00"> 
+            <name>RTX 3090</name> 
+            <price>3000</price> 
+            <qty>1</qty> 
+        </item>
+	<item instock="Y" itemid="K04"> 
+            <name>4K monitor</name> 
+            <price>500</price> 
+            <qty>2</qty> 
+        </item>  
+    </order>
+    <order ordId = "abc123"> 
+        <customerid>1234</customerid> 
+        <status>Completed</status> 
+        <item instock="Y" itemid="F12"> 
+            <name>RTX 3070</name> 
+            <price>1800</price> 
+            <qty>1</qty> 
+        </item>
+	<item instock="Y" itemid="S10"> 
+            <name>32GB DDR4 SDRAM</name> 
+            <price>250</price> 
+            <qty>2</qty> 
         </item>  
     </order> 
 </orders> 
