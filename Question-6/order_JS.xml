@@ -8,7 +8,6 @@
             <name>Flying By Roller Skates</name>
             <price>25.00</price>
             <qty>25</qty>
-            <supplier></supplier>
         </item>
         <item instock="N"
             itemid="B12">

@@ -2,7 +2,7 @@
 var xhttpLink = new XMLHttpRequest();
 
 //Open method is for opening the file
-xhttpLink.open('GET', 'order_JS.xml', false);
+xhttpLink.open('GET', 'order_modified.xml', false);
 
 //This line sends request to server
 xhttpLink.send();
@@ -60,3 +60,4 @@ function tableView() {
     return document.getElementById('tab').innerHTML = txtInTab; // Function returns all the data in the html file
 
 }
+

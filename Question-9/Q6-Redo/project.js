@@ -2,7 +2,7 @@
 var xhttpLink = new XMLHttpRequest();
 
 //Open method is for opening the file
-xhttpLink.open('GET', 'order_JS.xml', false);
+xhttpLink.open('GET', 'order_modified.xml', false);
 
 //This line sends request to server
 xhttpLink.send();
@@ -17,18 +17,17 @@ var $ = function (tagName) {
 
 //Define variables to assign values
 var order = $('order');
-var customerId = $('customerid');
 var itemId = $('item');
 var stats = $('status');
 
-function tableView() { //This function is used to retrive data from xml file
+function tableView() {//This function is used to retrive data from xml file
     var txtInTab = "<table border='1'>"; // This variable hold data of table
     txtInTab += "<tr> <td>CUSTOMER ID</td>  <td>ORDER ID</td>  <td>ITEM ID</td> </tr>";
     for (let index = 0; index < order.length; index++) {
 
         if (stats[index].innerHTML == "pending") { //This conditional checks the pending orders
             txtInTab += "<tr>";
-            txtInTab += "<td>" + customerId[index].innerHTML + "</td>";
+            txtInTab += "<td>" + order[index].getAttribute('customerid') + "</td>";
             txtInTab += "<td>" + order[index].getAttribute('ordId') + "</td>";
 
             var nodeElem = order[index];

@@ -1,8 +1,6 @@
-<?xml version="1.0"?> 
-
+<?xml version="1.0"?>
 <orders>
-    <order ordId = "ab101">
-        <customerid>2384</customerid>
+    <order ordId = "ab101" customerid = "2384">
         <status>pending</status>
         <item instock="Y"
             itemid="SD93">
@@ -23,8 +21,7 @@
             <qty>12</qty>
         </item>
     </order>
-    <order ordId = "ab102">
-        <customerid>5268</customerid>
+    <order ordId = "ab102" customerid ="5268">
         <status>complete</status>
         <item instock="Y"
             itemid="Q52">
@@ -39,8 +36,7 @@
             <qty>50</qty>
         </item>
     </order>
-    <order>
-        <customerid>3384</customerid>
+    <order customerid = "3384">
         <status>pending</status>
         <item instock="Y"
             itemid="PS93">
@@ -55,8 +51,7 @@
             <qty>15</qty>
         </item>
     </order>
-    <order ordId = "ab103">
-        <customerid>9008</customerid>
+    <order ordId = "ab103" customerid = "9008">
         <status>pending</status>
         <item instock="N"
             itemid="F32">
@@ -71,8 +66,8 @@
             <qty>100</qty>
         </item>
     </order>
-    <order ordId = "abc104">
-        <customerid>1337</customerid>
+
+    <order ordId = "abc104" customerid = "1337">
         <status>pending</status>
         <item instock="N"
             itemid="F13">
@@ -87,8 +82,7 @@
             <qty>2</qty>
         </item>
     </order>
-    <order ordId = "ab105">
-        <customerid>1995</customerid>
+    <order ordId = "ab105" customerid = "1995">
         <status>pending</status>
         <item instock="N"
             itemid="F00">
@@ -103,8 +97,7 @@
             <qty>2</qty>
         </item>
     </order>
-    <order ordId = "abc106">
-        <customerid>1234</customerid>
+    <order ordId = "abc106" customerid = "1234">
         <status>Completed</status>
         <item instock="Y"
             itemid="F12">
