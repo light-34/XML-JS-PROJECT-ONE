@@ -31,9 +31,7 @@
                             </td>
                             <td>
                                 <xsl:value-of select="status"/>
-                            </td>                            
-                            <xsl:choose>
-                            <xsl:when test="item[@instock='N']">
+                            </td>  
                             <td>
                                 <table border='1'>
                                     <tr>
@@ -43,8 +41,10 @@
                                         <td> Price </td>
                                         <td> Quantity </td>
                                     </tr>
-                                    <xsl:for-each select="item">
-                                    <xsl:sort select="@itemid"/>
+                                    <xsl:for-each select="item"> 
+                                    <xsl:sort select="@itemid"/>                               
+                                    <xsl:choose>
+                                    <xsl:when test="@instock='N'">
                                         <tr>
                                             <td style='background-color: red'>
                                                 <xsl:value-of select="@instock"/>
@@ -62,22 +62,8 @@
                                                 <xsl:value-of select="qty" />
                                             </td>
                                         </tr>
-                                    </xsl:for-each>
-                                </table>
-                            </td>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <td>
-                                <table border='1'>
-                                    <tr>
-                                        <td>Item-Instock</td> 
-                                        <td>Item-ID</td>
-                                        <td> Name </td>
-                                        <td> Price </td>
-                                        <td> Quantity </td>
-                                    </tr>
-                                    <xsl:for-each select="item">
-                                    <xsl:sort select="@itemid"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
                                         <tr>
                                             <td style='background-color: white'>
                                                 <xsl:value-of select="@instock"/>
@@ -88,18 +74,18 @@
                                             <td style='background-color: white'>
                                                 <xsl:value-of select="name" />
                                             </td>
-                                            <td>
+                                            <td style='background-color: white'>
                                                 <xsl:value-of select="price" />
                                             </td>
-                                            <td>
+                                            <td style='background-color: white'>
                                                 <xsl:value-of select="qty" />
                                             </td>
                                         </tr>
+                                    </xsl:otherwise>
+                                    </xsl:choose>
                                     </xsl:for-each>
                                 </table>
-                                </td>
-                            </xsl:otherwise>
-                            </xsl:choose>
+                            </td> 
                         </tr>
                     </xsl:for-each>
                 </table>
