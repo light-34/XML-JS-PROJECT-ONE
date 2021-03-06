@@ -24,7 +24,7 @@ var itemN = $('item');
 function tableView() {
     var txtF = document.getElementById('textfield').value; //This variable retrieve text from text field of html
     var txtInTab = "<table border='1'>"; // This variable hold data of table
-    txtInTab += "<tr>  <td>ORDER ID</td><td>ITEM ID</td></tr>";
+    txtInTab += "<tr>  <td>ORDER ID</td><td>ITEM ID</td><td>NAME</td></tr>";
 
     for (let index = 0; index < order.length; index++) { // this loop is used to check order tag
         var orderId = order[index].getAttribute('ordId'); //assigns orderid
@@ -39,10 +39,11 @@ function tableView() {
                 var second = first.firstChild;
 
                 for (j = 0; j < first.childNodes.length; j++) { // loops amont item's child nodes
-                    if (second.nodeName == 'name' && txtF == second.innerHTML) { // finds name child nodes and checks text content
+                    if (second.nodeName == 'name' && second.innerHTML.includes(txtF)) { // finds name child nodes and checks text content
                         txtInTab += "<tr>";
                         txtInTab += "<td>" + orderId + "</td>";
                         txtInTab += "<td>" + itemId + "</td>";
+                        txtInTab += "<td>" + second.innerHTML + "</td>";
                         txtInTab += "</tr>";
                     }
                     second = second.nextSibling; // assigns next sibling
