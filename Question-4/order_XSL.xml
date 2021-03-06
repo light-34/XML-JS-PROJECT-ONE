@@ -1,4 +1,4 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="order_XSL.xsl" ?>
 <orders>
     <order ordId = "ab101">

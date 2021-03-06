@@ -3,14 +3,18 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
         <html>
+            <head>
+                <title>Queston 4 XSL File</title>
+            </head>
             <body>
                 <table border='1'>
                     <xsl:for-each select="//order">
                         <tr>
-                        <td> Order Id : <xsl:value-of select="@ordId" /></td>
+                            <td> Order Id : <xsl:value-of select="@ordId" />
+                            </td>
                         </tr>
                         <tr>
-                        <td>
+                            <td>
                                 <table border='1'>
                                     <tr>
                                         <td> Name </td>
@@ -26,10 +30,18 @@
                                             <td>
                                                 <xsl:value-of select="name" />
                                             </td>
-                                            <td> <xsl:value-of select="../customerid" /></td>
-                                            <td> <xsl:value-of select="../status" /> </td>
-                                            <td> <xsl:value-of select="@itemid" /> </td>
-                                            <td> <xsl:value-of select="@instock" /> </td>
+                                            <td>
+                                                <xsl:value-of select="../customerid" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="../status" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="@itemid" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="@instock" />
+                                            </td>
                                             <td>
                                                 <xsl:value-of select="price" />
                                             </td>
@@ -39,7 +51,7 @@
                                         </tr>
                                     </xsl:for-each>
                                 </table>
-                           </td>
+                            </td>
 
                         </tr>
                     </xsl:for-each>
