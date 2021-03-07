@@ -8,7 +8,8 @@
          <body> 
          <h1> Question 8 </h1>               
            <table border='1'>
-                    <tr>
+           <!-- Create the table -->
+                    <tr style='background-color: gold'> <!-- Create the table header row  -->
                         <td>
                             <h4>Order ID</h4>
                         </td>
@@ -22,20 +23,20 @@
                             <h4>Item</h4>
                         </td>
                     </tr>
-                    <xsl:for-each select="//order">
+                    <xsl:for-each select="//order"> <!-- Create for loop for order -->
                         <tr>
                             <td>
-                                <xsl:value-of select="@ordId"/>
+                                <xsl:value-of select="@ordId"/> <!-- accessing attribute data -->
                             </td>
                             <td>
                                 <xsl:value-of select="customerid"/>
                             </td>
                             <td>
-                                <xsl:value-of select="status"/>
+                                <xsl:value-of select="status"/> <!-- accessing element data -->
                             </td> 
                             <td>
                                 <table border='1'>
-                                    <tr>
+                                    <tr style='background-color: lightblue'> <!-- some style -->
                                         <td>Item-Instock</td> 
                                         <td>Item-ID</td>
                                         <td> Name </td>
@@ -43,9 +44,9 @@
                                         <td> Quantity </td>
                                     </tr>
                                     <xsl:for-each select="item">
-                                    <xsl:sort select="@itemid"/>
+                                    <xsl:sort select="@itemid"/> <!-- sorting by item id-->
                                     <xsl:choose>
-                                    <xsl:when test="@instock='N'">
+                                    <xsl:when test="@instock='N'"> <!-- when statement checker  -->
                                         <tr>
                                             <td style='background-color: red'>
                                                 <xsl:value-of select="@instock"/>

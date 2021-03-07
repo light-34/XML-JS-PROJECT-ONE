@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="schema.xsd"> 
+xsi:noNamespaceSchemaLocation="schema.xsd">  
+<!-- Above line is what is needed to link xml to external schema -->
     <order ordId = "ab101"> 
         <customerid>2384</customerid> 
         <status>pending</status> 

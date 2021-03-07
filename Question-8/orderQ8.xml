@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="q8.xsl"?> 
+<!-- Above line is needed to link XML to XSL -->
 <orders>
     <order ordId = "ab101">
         <customerid>2384</customerid>
